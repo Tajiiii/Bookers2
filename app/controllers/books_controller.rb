@@ -16,6 +16,7 @@ before_action :authenticate_user!
     @book_show = Book.find(params[:id])
     @book = Book.new
     @books = Book.all
+    @book_comment = BookComment.new
   end
 
   def create
