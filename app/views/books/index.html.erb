@@ -81,13 +81,13 @@
                 <td><%= book.body %></td>
                 <td><% if book.favorited_by?(current_user) %>
                         <%= link_to book_favorites_path(book), method: :delete do %>
-                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                          <%= book.favorites.count %>
+                          <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;">
+                          <%= book.favorites.count %></span>
                         <% end %>
                       <% else %>
                         <%= link_to book_favorites_path(book), method: :post do %>
-                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                          <%= book.favorites.count %>
+                          <span class="glyphicon glyphicon-heart" aria-hidden="true">
+                          <%= book.favorites.count %></span>
                         <% end %>
                     <% end %></td>
                 <td><p>コメント数:<%= book.book_comments.count %></p></td>
