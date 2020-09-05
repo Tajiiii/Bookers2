@@ -25,6 +25,14 @@ before_action :authenticate_user!
     end
   end
 
+  def follows
+
+  end
+
+  def followers
+    
+  end
+
   def new
     @user = User.new
   end
